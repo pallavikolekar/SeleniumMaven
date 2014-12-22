@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="GQC-Pallavi" name="Scripts.AppTest" tests="1" failures="0" timestamp="22 Dec 2014 07:30:37 GMT" time="9.712" errors="0">
+  <testcase name="FirstDemo" time="9.697" classname="Scripts.AppTest"/>
+</testsuite>
