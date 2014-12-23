@@ -10,6 +10,6 @@ public class TestClass {
 	}
 	@Test
 	public void SampleTest() {
-		System.out.println("I m in sample test");
+		System.out.println("I m in sample test1");
 	}
 }
