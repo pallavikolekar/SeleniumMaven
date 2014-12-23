@@ -8,4 +8,8 @@ public class TestClass {
 	public void SampleOne() {
 		System.out.println("Test Demo");
 	}
+	@Test
+	public void SampleTest() {
+		System.out.println("I m in sample test");
+	}
 }
