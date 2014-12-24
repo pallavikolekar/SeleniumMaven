@@ -16,10 +16,10 @@ public class AppTest {
 	WebDriver driver;
 	@Test
 	public void FirstDemo() throws MalformedURLException{
-		//driver = new FirefoxDriver();
-		DesiredCapabilities capability = DesiredCapabilities.firefox();
+		driver = new FirefoxDriver();
+		/*DesiredCapabilities capability = DesiredCapabilities.firefox();
         capability.setPlatform(Platform.WINDOWS);
-        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
+        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);*/
 		driver.get("http://www.google.com");
 		Assert.assertEquals("Google",driver.getTitle());
 		System.out.println("I m in test");
