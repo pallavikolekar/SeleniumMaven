@@ -16,13 +16,21 @@ public class AppTest {
 	WebDriver driver;
 	@Test
 	public void FirstDemo() throws MalformedURLException{
-		driver = new FirefoxDriver();
+		//driver = new FirefoxDriver();
 		/*DesiredCapabilities capability = DesiredCapabilities.firefox();
         capability.setPlatform(Platform.WINDOWS);
-        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);*/
+        driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444/wd/hub"), capability);
+		driver.get("http://www.google.com");*/
+		
+		URL url = new URL( "http", "localhost", 5555, "/wd/hub" );
+		DesiredCapabilities capabilities =DesiredCapabilities.firefox();
+		System.out.println("1");
+		capabilities.setJavascriptEnabled(true);
+		System.out.println("2");
+		WebDriver driver = new RemoteWebDriver(url,capabilities);
 		driver.get("http://www.google.com");
 		Assert.assertEquals("Google",driver.getTitle());
 		System.out.println("I m in test");
-		driver.close();
+		driver.quit();
 	}
 }
