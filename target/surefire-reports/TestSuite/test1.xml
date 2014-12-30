@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="GQC-Pallavi" name="Scripts.AppTest" tests="1" failures="1" timestamp="30 Dec 2014 04:59:59 GMT" time="10.093" errors="0">
+  <testcase name="AppTestDemo" time="1.993" classname="Scripts.AppTest">
+    <failure type="java.lang.AssertionError" message="expected:&amp;lt;Google&amp;gt; but was:&amp;lt;Google1&amp;gt;">
+      <![CDATA[java.lang.AssertionError: expected:<Google> but was:<Google1>
+	at Scripts.AppTest.AppTestDemo(AppTest.java:41)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:122)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:101)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+... Removed 31 stack frames]]>
+    </failure>
+  </testcase>
+</testsuite>

@@ -10,27 +10,40 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class AppTest {
 	WebDriver driver;
+	
+	@BeforeMethod
+	public void InitilizeDriver() throws MalformedURLException {
+		System.out.println("I m in before method");
+		System.out.println("I m in Apptest");
+		URL url = new URL( "http", "localhost", 5555, "/wd/hub" );
+		DesiredCapabilities capabilities =DesiredCapabilities.firefox();
+		capabilities.setJavascriptEnabled(true);
+		driver = new RemoteWebDriver(url,capabilities);
+	}
+	
+	
+	
 	@Test
-	public void FirstDemo() throws MalformedURLException{
+	public void AppTestDemo()  {
 		//driver = new FirefoxDriver();
 		/*DesiredCapabilities capability = DesiredCapabilities.firefox();
         capability.setPlatform(Platform.WINDOWS);
         driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444/wd/hub"), capability);
 		driver.get("http://www.google.com");*/
 		
-		URL url = new URL( "http", "localhost", 5555, "/wd/hub" );
-		DesiredCapabilities capabilities =DesiredCapabilities.firefox();
-		System.out.println("1");
-		capabilities.setJavascriptEnabled(true);
-		System.out.println("2");
-		WebDriver driver = new RemoteWebDriver(url,capabilities);
 		driver.get("http://www.google.com");
-		Assert.assertEquals("Google",driver.getTitle());
-		System.out.println("I m in test");
+		Assert.assertEquals("Google1",driver.getTitle());		
+	}
+	
+	@AfterMethod
+	public void ClosedDriver() {
+		System.out.println("I m in After Method");
 		driver.quit();
 	}
 }

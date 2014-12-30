@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">  
+<suite name="TestSuite" preserve-order="true" >  
+   <test name="test1" preserve-order="true">
+      <classes preserve-order="true">  
+            <class name="Scripts.AppTest"/>
+       </classes>  
+   </test>  
+   <test name="test2" preserve-order="true">
+      <classes preserve-order="true">  
+            <class name="Scripts.GoogleTest"/>
+       </classes>  
+   </test>  
+   <test name="test3" preserve-order="true">
+       <classes>
+           <class name="Scripts.TestClass"></class>
+       </classes>
+   </test>
+</suite>
